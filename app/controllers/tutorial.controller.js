@@ -27,8 +27,8 @@ exports.create = (req, res) => {
 };
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
-	const title = req.query.title;
-	var condition = title ? { title: title } : {};
+	const description = req.query.description;
+	var condition = description ? { description: description } : {};
 	Tutorial.find(condition)
 		.then((data) => {
 			res.send(data);
